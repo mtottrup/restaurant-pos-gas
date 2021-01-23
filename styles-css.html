@@ -1,0 +1,257 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+main {
+    height: 92%;
+}
+
+body {
+    background-color: #121212;
+}
+
+header {
+    background-color: rgb(255, 255, 255, .1);
+    color: #a7e1ee;
+    font-size: smaller;
+}
+
+header h1 {
+    font-family: 'Audiowide', cursive;
+    margin-left: 15px;
+}
+
+main {
+    margin-top: 10px;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.order,
+.menu-payment {
+    border: solid .5px;
+    border-radius: 10px;
+    margin: 0px 10px 5px 10px;
+    height: 100%;
+    max-height: 100%;
+}
+
+
+/*-------------------------------ORDER------------------*/
+
+.order {
+    background-color: white;
+    flex: 0 0 440px;
+    overflow: auto;
+}
+
+.receipt {
+    border: solid .5px;
+    margin: 10px 15px 5px 15px;
+    box-shadow: 3px 3px 2px rgb(3, 3, 3);
+    user-select: none;
+    flex-grow: 1;
+}
+
+.receipt,
+.company-info,
+.receipt-footer {
+    align-items: center;
+}
+
+.company-info {
+    margin-top: 5px;
+}
+
+#company-name {
+    font-size: 1.5rem;
+}
+
+#company-phone {
+    font-size: 1.25rem;
+}
+
+th.description {
+    width: 180px;
+    text-align: left;
+}
+
+th.price {
+    width: 70px;
+}
+
+th.subtotal {
+    width: 75px;
+}
+
+.quantity,
+.price,
+.subtotal,
+.delete {
+    text-align: right;
+}
+
+.receipt-details {
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+.dotted-border {
+    border-bottom: dotted 2px;
+}
+
+.fa-backspace:hover {
+    transform: scale(1.2);
+}
+
+table.summary-table {
+    text-align: right;
+}
+
+tbody.summary-table td:nth-child(1) {
+    width: 277px;
+}
+
+tbody.summary-table td:nth-child(2) {
+    width: 75px;
+}
+
+tbody.summary-table td:nth-child(3) {
+    width: 25px;
+}
+
+.receipt-footer {
+    padding-top: 20px;
+}
+
+#barcode {
+    font-family: 'Libre Barcode 128', cursive;
+    font-size: 70px;
+    margin-top: 10px
+}
+
+.toolbar {
+    flex: 0 0 60px;
+    justify-content: space-around;
+    align-items: center;
+    border: solid .5px;
+    border-radius: 10px;
+    margin: 0px 15px 5px 15px;
+}
+
+.toolbar-icon {
+    font-size: 2rem;
+}
+
+.toolbar-icon:hover {
+    transform: scale(1.2);
+}
+
+
+/*------------------------------------Menu-Payment-------------*/
+
+.menu-payment {
+    background: rgba(255, 255, 255, .05);
+    flex-grow: 1;
+    z-index: 0;
+}
+
+.menu {
+    flex-flow: row wrap;
+    grid-column: 1;
+    grid-row: 1;
+    align-content: flex-start;
+    z-index: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+.menu-item {
+    flex-flow: column nowrap;
+    flex-basis: auto;
+    flex-shrink: 0;
+    margin: 5px;
+    background: rgba(255, 255, 255, .05);
+    width: 150px;
+}
+
+.menu-img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+figcaption {
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+
+.menu-item:hover>.menu-img {
+    transform: scale(1.03);
+}
+
+#payment-overlay {
+    display: none;
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-columns: 330px auto;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: rgba(255, 255, 255, .05);
+}
+
+.paypad {
+    margin: 10px 0 0 10px;
+    align-content: center;
+    grid-column: 1;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(5, 100px);
+}
+
+.span3-col {
+    grid-column: span 3;
+}
+
+#close-sale {
+    display: none;
+}
+
+.paypad-btn.number {
+    font-size: 2rem;
+}
+
+.close-icon {
+    color: white;
+    font-size: 3rem;
+    margin: 150px 0 0 15px;
+}
+
+.close-icon:hover {
+    transform: scale(1.03);
+}
+</style>

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Libre+Barcode+128&family=Roboto&display=swap" rel="stylesheet">
+    <?!= include("styles-css"); ?>
+    
+    <title>Restaurant POS</title>
+</head>
+
+<body>
+    <header>
+        <h1>Restaurant POS</h1>
+    </header>
+    <main class="main-container flex-row">
+        <section class="order flex-column">
+            <article class="receipt flex-column">
+                <div class="company-info flex-column">
+                    <p id="company-name">The Awesome Cafe</p>
+                    <p id="company-address">123 Elm St.</p>
+                    <p id="company-city">New York, NY</p>
+                    <p id="company-phone">888-888-8888</p>
+                    <p id="invoice-number"></p>
+                </div>
+                <div class="receipt-details">
+                    <table class="details-detail">
+                        <thead>
+                            <tr>
+                                <td class="dotted-border" colspan="5"></td>
+                            </tr>
+                            <tr>
+                                <td class="empty-border" colspan="5"></td>
+                            </tr>
+                            <tr>
+                                <th class="description">Description</th>
+                                <th class="quantity">Qty</th>
+                                <th class="price">Price</th>
+                                <th class="subtotal">Sub</th>
+                                <th class="delete">Del</th>
+                            </tr>
+                            <tr>
+                                <td class="dotted-border" colspan="5"></td>
+                            </tr>
+                            <tr>
+                                <td class="empty-border" colspan="5"></td>
+                            </tr>
+                        </thead>
+                        <tbody id="receipt-details">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="receipt-summary">
+                    <table class="summary-table">
+                        <tbody class="summary-table" id="total-summary">
+                            <tr>
+                                <td class="dotted-border" colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td class="empty-border" colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td>Subtotal:</td>
+                                <td id="subtotal-summary">$0.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Tax:</td>
+                                <td id="tax-summary">$0.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Grand Total:</td>
+                                <td id="grandtotal-summary">$0.00</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody class="summary-table" id="payment-summary">
+                            <tr>
+                                <td>Amt Paid:</td>
+                                <td id="amount-paid">$0.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td id="tip-change-title">Change:</td>
+                                <td id="tip-change-value">$0.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Payment Type:</td>
+                                <td id="payment-type"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="dotted-border" colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td class="empty-border" colspan="3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="receipt-footer flex-column">
+                    <p id="receipt-message">Thanks For Your Business</p>
+                    <p id="barcode">Barcode</p>
+                </div>
+            </article>
+            <div class="toolbar flex-row">
+                <i class="fas fa-money-bill-wave toolbar-icon paypad-show" data-payment-type='{"type" : "cash"}'></i>
+                <i class="fas fa-credit-card toolbar-icon paypad-show" data-payment-type='{"type" : "credit"}'></i>
+                <i class="fas fa-trash-alt toolbar-icon" id="clear-order"></i>
+            </div>
+        </section>
+        <section class="menu-payment grid">
+            <div class="menu flex-row" id="menu">
+
+            </div>
+            <div class="payment grid" id="payment-overlay">
+                <div class="paypad grid" id="paypad">
+                    <button class="paypad-btn number" data-id="7">7</button>
+                    <button class="paypad-btn number" data-id="8">8</button>
+                    <button class="paypad-btn number" data-id="9">9</button>
+                    <button class="paypad-btn number" data-id="4">4</button>
+                    <button class="paypad-btn number" data-id="5">5</button>
+                    <button class="paypad-btn number" data-id="6">6</button>
+                    <button class="paypad-btn number" data-id="1">1</button>
+                    <button class="paypad-btn number" data-id="2">2</button>
+                    <button class="paypad-btn number" data-id="3">3</button>
+                    <button class="paypad-btn number" data-id="0">0</button>
+                    <button class="paypad-btn" data-id="back">Back</button>
+                    <button class="paypad-btn" data-id="clear">Clear</button>
+                    <button class="paypad-btn span3-col" id="close-sale" data-id="close-sale">Close Sale</button>
+                </div>
+                <div class="close-paypad flex">
+                    <i class="fas fa-times close-icon paypad-close" id="paypad-close"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <?!= include("script-js"); ?>
+</body>
+
+</html>
