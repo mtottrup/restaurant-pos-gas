@@ -1,5 +1,5 @@
 # restaurant-pos-gas
-Basic Point of Sale that reads and writes to Google Sheets. 
+Basic Point of Sale that reads and writes to Google Sheets using Google Apps Script. 
 
 Video of the creation of this app is here: https://youtu.be/ccVBKUUJUYI
 
