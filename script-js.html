@@ -203,7 +203,7 @@ class Ui {
         let frag = document.createDocumentFragment();
 
         orderInstance.menu.forEach(item => {
-            let menuElement = `<img src="${item.image}'" alt="${item.description}" class="menu-img" style="width:150px;">
+            let menuElement = `<img src="${item.image}" alt="${item.description}" class="menu-img" style="width:150px;">
             <figcaption>${item.description}</figcaption>
             <figcaption>${Utilities.convertFloatToString(item.price)}</figcaption>`
 
