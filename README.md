@@ -8,3 +8,6 @@ This is a BASIC POS, it does not include any tests or data validation so it's no
 If this code helped you to learn some concepts you can buy me a coffee. Thanks!
 
 https://www.paypal.com/paypalme/codingwithmike
+
+Here is a link to copy a completed sheet with app:
+bit.ly/3z81iOK
