@@ -7,4 +7,4 @@ This is a BASIC POS, it does not include any tests or data validation so it's no
 
 If this code helped you to learn some concepts you can buy me a coffee. Thanks!
 
-paypal.me/codingwithmike
+https://www.paypal.com/paypalme/codingwithmike
